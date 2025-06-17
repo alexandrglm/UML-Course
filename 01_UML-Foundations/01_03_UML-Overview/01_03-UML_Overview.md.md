@@ -29,7 +29,7 @@
 
 ## 1.     What UML is
 
-![UML LOGO](./01_01_IMG1.png)
+![UML LOGO](./01_03_IMG1.png)
   
 **UML** stands for **Unified Modeling Language**. 
 
