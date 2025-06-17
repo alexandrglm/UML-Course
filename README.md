@@ -43,7 +43,7 @@
 | 07-187 | The Importance of Systems Analysis and Design |
 | 07-188 | Overview of Software Systems                  |
 
-### 2. UML Fundamentals
+### 2. UML Commons
 
 | Guide  | Tittle                                             |
 | ------ | -------------------------------------------------- |
