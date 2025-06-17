@@ -1,12 +1,13 @@
 
-# UML & Software Analysis Course 
+# UML & Software/System Analysis Course 
 
 
-### Course Content - Index
+### Syllabus
 
 1. UML Foundation
 
-2. UML Fundamentals
+2. UML Commons
+
 
 3. UML Diagrams
 
@@ -33,15 +34,16 @@
 
 ### 1. UML Foundation
 
-| Guide  | Tittle                                      |
-| ------ | ------------------------------------------- |
-| 06-150 | UML Overview                                |
-| 06-151 | Stages of Development where UML is Utilized |
 
 | Guide  | Tittle                                        |
 | ------ | --------------------------------------------- |
 | 07-187 | The Importance of Systems Analysis and Design |
 | 07-188 | Overview of Software Systems                  |
+
+| Guide  | Tittle                                      |
+| ------ | ------------------------------------------- |
+| 06-150 | UML Overview                                |
+| 06-151 | Stages of Development where UML is Utilized |
 
 ### 2. UML Commons
 
@@ -54,7 +56,6 @@
 | 06-156 | Common UML Components: Comments and Notes          |
 | 06-157 | Common UML Components: Dependencies                |
 | 06-158 | Common UML Components: Features and Properties     |
-| 06-159 | Quiz:   Introduction to UML                        |
 
 
 ### 3.   UML Diagrams
@@ -64,7 +65,6 @@
 | 06-160 | Section Introduction                   |
 | 06-161 | Overview of Structural Diagrams in UML |
 | 06-162 | Overview of Behavioral Diagrams in UML |
-| 06-163 | QUIZ:    UML Diagrams                  |
 
 #### 3.1 Class 
 
@@ -73,15 +73,13 @@
 | 06-164 | Overview of Class Diagram Elements                                                    |
 | 06-165 | UML Class Diagram Associations, Multiplicity, and Navigability (and Role)             |
 | 06-166 | Deep Dive: Build Twitter Using Class Diagrams **(UML Customization for the Clarity)** |
-| 06-167 | Class Diagrams                                                                        |
 
 #### 3.2 Activity
 
-| Guide  | Tittle                                                                                |
-| ------ | ------------------------------------------------------------------------------------- |
-| 06-168 | Elements of a UML Activity Diagram                                                    |
-| 06-169 | How to Design an Activity Diagram for an Online Grading System                        |
-| 06-170 | Activity Diagrams                                                                     |
+| Guide  | Tittle                                                         |
+| ------ | -------------------------------------------------------------- |
+| 06-168 | Elements of a UML Activity Diagram                             |
+| 06-169 | How to Design an Activity Diagram for an Online Grading System |
 
 
 #### 3.3  Use Case
@@ -90,7 +88,6 @@
 | ------ | --------------------------------------------------------------- |
 | 07-172 | Overview of UML Use Case Diagram Elements                       |
 | 07-173 | Deep Dive: Build a Marketing Automation System Use Case Diagram |
-| 07-174 | Use Case Diagrams                                               |
 
 
 #### 3.4 Deployment
@@ -99,7 +96,6 @@
 | ------ | --------------------------------------------------------- |
 | 07-175 | Overview of the Elements of a UML Deployment Diagram      |
 | 07-176 | Deep Dive: Build a Song Request Deployment Engine Diagram |
-| 07-177 | Deployment Diagrams                                       |
 
 
 #### 3.5 Package
@@ -108,7 +104,6 @@
 | ------ | -------------------------------------------------------------- |
 | 07-178 | Overview of UML Package Diagram Elements                       |
 | 07-179 | Deep Dive: Build a Marketing Automation System Package Diagram |
-| 07-180 | Package Diagrams                                               |
 
 #### 3.6 Sequence
 
@@ -116,7 +111,6 @@
 | ------ | --------------------------------------------------------- |
 | 07-181 | Overview of the Elements of a UML Sequence Diagram        |
 | 07-182 | Deep Dive: Build a CRM Commission Engine Sequence Diagram |
-| 07-183 | Interaction Sequence Diagrams                             |
 
 #### 3.7 State Machine
 
@@ -124,7 +118,6 @@
 | ------ | ---------------------------------------------- |
 | 07-184 | Overview of UML State Machine Diagram Elements |
 | 07-185 | Deep Dive: Build a CRM State Machine Diagram   |
-| 07-186 | State Machine Diagrams                         |
 
 ---
 ## 4. UML Software Analysis
