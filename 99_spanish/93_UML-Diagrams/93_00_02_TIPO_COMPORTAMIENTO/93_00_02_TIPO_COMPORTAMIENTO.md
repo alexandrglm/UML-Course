@@ -1,394 +1,395 @@
-
-
-| Guide  | Tittle                                  |
-| ------ | --------------------------------------- |
-| 06-161 | Overview of Structural Diagrams in UML  |
-| **06-162** | **Overview of Behavioural Diagrams in UML** |
+| Guía       | Título                                                   |
+| ---------- | -------------------------------------------------------- |
+| 06-161     | Visión General de Diagramas Estructurales en UML        |
+| **06-162** | **Visión General de Diagramas de Comportamiento en UML** |
 
 ---
-# 06-162:  Behavioural Diagrams
+# 06-162:  Diagramas de Comportamiento
 
 
+1. Introducción a los Diagramas de Comportamiento
 
-1. Introduction to Behavioural Diagrams
+2. Diagramas de Actividad
+   2.1. Propósito y Accesibilidad No Técnica  
+   2.2. Elementos Principales  
+   2.3. Ejemplo de Servicio de Pedidos de Café  
+   2.4. Modelado de Experiencia de Usuario  
 
-2. Activity Diagrams
-   2.1. Purpose and Non-Technical Accessibility  
-   2.2. Core Elements  
-   2.3. Coffee Ordering Service Example  
-   2.4. User Experience Modeling  
+3. Diagramas de Casos de Uso
+   3.1. Ilustración de Sistema de Autorización  
+   3.2. Componentes Principales  
+   3.3. Ejemplo de Motor de Marketing  
+   3.4. Control de Acceso Basado en Actores  
 
-3. Use Case Diagrams
-   3.1. Authorization System Illustration  
-   3.2. Core Components  
-   3.3. Marketing Engine Example  
-   3.4. Actor-Based Access Control  
+4. Diagramas de Máquina de Estados
+   4.1. Visualización del Ciclo de Vida de Datos  
+   4.2. Elementos Esenciales  
+   4.3. Ejemplo de Embudo de Leads  
+   4.4. Comparación con Diagramas de Actividad  
 
-4. State Machine Diagrams
-   4.1. Data Life-cycle Visualisation  
-   4.2. Essential Elements  
-   4.3. Lead Funnel Example  
-   4.4. Comparison with Activity Diagrams  
+5. Diagramas de Secuencia
+   5.1. Diseño de Sistemas Basado en Mensajes  
+   5.2. Elementos Enfocados en Implementación  
+   5.3. Ejemplo de Analizador de Teléfonos  
+   5.4. Pensamiento de Sistemas Entrada-Salida  
 
-5. Sequence Diagrams
-   5.1. Message-Based System Design  
-   5.2. Implementation-Focused Elements  
-   5.3. Phone Parser Example  
-   5.4. Input-Output System Thinking  
+6. Mejores Prácticas y Directrices de Implementación
 
-6. Best Practices and Implementation Guidelines
-
-7. Tools and Diagram Selection Criteria
+7. Herramientas y Criterios de Selección de Diagramas
 
 ---
 
 
 
-## ***1.    Introduction to Behavioural Diagrams***
+## ***1.    Introducción a los Diagramas de Comportamiento***
 ---
-Behavioural diagrams represent the dynamic aspects of UML modeling, illustrating **how systems should behave, act, and interact with internal components and external actors.** 
+Los diagramas de Comportamiento representan los aspectos dinámicos del modelado UML, ilustrando **cómo los sistemas deben comportarse, actuar e interactuar con componentes internos y actores externos.** 
 
-Unlike structural diagrams that show what exists in the system, behavioural diagrams **focus on what happens** when the system runs, giving clarity for understanding the system behaviour, user interactions, and the dynamic relationships between system components.
+A diferencia de los diagramas estructurales que muestran qué existe en el sistema, los diagramas de Comportamiento **se enfocan en qué sucede** cuando el sistema se ejecuta, **aportando claridad** acerca del **comportamiento del sistema, interacciones de usuario y las relaciones dinámicas entre componente**s del sistema.
 
-
-|                                  | Purpose                              |
-| -------------------------------- | ------------------------------------ |
-| **Use Case Diagram**             | Actors and system interactions       |
-| **Activity Diagram**             | Workflows and business processes     |
-| **State Machine Diagram**        | Object states and transitions        |
-| **Sequence Diagram**             | Time-ordered interactions            |
-| **Communication Diagram**        | Object interactions with links       |
-| **Timing Diagram**               | Interactions with timing constraints |
-| **Interaction Overview Diagram** | Control flow between interactions    |
-
-
-The **FOU**R primary behaviourañ diagrams covered are:
-
-- **Activity Diagrams**: Workflow and process modeling
-- **Use Case Diagrams**: User interaction and system functionality
-- **State Machine Diagrams**: Object state transitions and life-cycle
-- **Sequence Diagrams**: Message passing and system interactions
+|                                  | Propósito                                     |
+| -------------------------------- | --------------------------------------------- |
+| **Diagrama de Casos de Uso**     | Actores e interacciones del sistema          |
+| **Diagrama de Actividad**        | Flujos de trabajo y procesos de negocio      |
+| **Diagrama de Máquina de Estados** | Estados de objetos y transiciones          |
+| **Diagrama de Secuencia**        | Interacciones ordenadas en el tiempo         |
+| **Diagrama de Comunicación**     | Interacciones de objetos con enlaces         |
+| **Diagrama de Temporización**    | Interacciones con restricciones de tiempo    |
+| **Diagrama de Visión General de Interacción** | Flujo de control entre interacciones |
 
 
----
+Los **CUATRO** diagramas de Comportamiento principales cubiertos son:
 
-## ***2.    Activity Diagrams***
----
-### Purpose and Non-Technical Accessibility
+- **Diagramas de Actividad**: Modelado de flujos de trabajo y procesos
+- **Diagramas de Casos de Uso**: Interacción de usuario y funcionalidad del sistema
+- **Diagramas de Máquina de Estados**: Transiciones de estado de objetos y ciclo de vida
+- **Diagramas de Secuencia**: Paso de mensajes e interacciones del sistema
 
-Activity diagrams are exceptionally powerful for visualising system workflows and user processes.   
-
-Their greatest strength lies in their **accessibility to non-technical stakeholders**. 
-Executives and business and  users, who may have no understanding of UML notation, can easily comprehend activity diagrams, making them invaluable for stakeholder communication.
-
-#### **Benefits**
-
-- **Improving the Communication**: Bridge between technical and non-technical teams
-- **Process Documentation**: Clear visualisation of business workflows
-- **System Planning**: Foundation for building systems from scratch
-- **User Journey Mapping**: Complete user life-cycle visualisation
-
-### Core Elements
-
-Activity diagrams comprise six essential components:
-
-1. **Initial State**: Starting point of the process (solid black circle)
-2. **Activity/Action State**: Individual steps or processes (rounded rectangles)
-3. **Action Flow**: Directional arrows showing process flow
-4. **Decisions/Branching**: Diamond shapes representing choice points
-5. **Guards**: Conditions that must be met for transitions
-6. **Final State**: End point of the process (solid black circle with outer ring)
-
----
-### Coffee Ordering Service Example
-
-The coffee ordering service demonstrates how activity diagrams capture complex user interactions:
-
-#### **Process Flow**
-
-1. User initiates order online
-2. Decision point based on user selection
-3. Multiple pathways depending on choices:
-
-   - Product search and selection
-   - Product viewing and details
-   - Cart addition and management
-   - Checkout and payment processing
-
-This single diagram encapsulates the entire user experience, providing developers with a clear roadmap for application implementation.
-
-### User Experience Modeling
-
-Activity diagrams excel at high-level process modeling because they focus on activities rather than technical implementation details. They answer critical questions:
-
-- What happens when users search for products?
-- How do users navigate product selection?
-- What decision points exist in the user journey?
-- How do different user choices affect the workflow?
 
 ---
 
-
-## ***3.    Use Case Diagram***s
+## ***2.    Diagramas de Actividad***
 ---
-### Authorisation System Illustration
+### Propósito y Accesibilidad No Técnica
 
-Use case diagrams **provide high-level visualisation of system functionality and user access rights.**  
+Los diagramas de actividad son excepcionalmente poderosos para visualizar flujos de trabajo del sistema y procesos de usuario.   
 
-They're particularly valuable for designing authorization systems, clearly showing what different user types can access and accomplish within the system.
+Su mayor fortaleza radica en su **accesibilidad para partes interesadas no técnicas**. 
 
-#### **Primary Applications**
+Stakeholders, usuarios comunes, que pueden no tener conocimientos sobre UML, pueden entender fácilmente los diagramas de actividad, haciéndolos invaluables para la comunicación entre todas las partes.
 
-- **Authorisation Design**: Defining user roles and permissions
-- **System Scope Definition**: Boundary setting for system functionality
-- **Stakeholder Communication**: Clear presentation of system capabilities
-- **Feature Planning**: Comprehensive view of system features
+#### **Beneficios**
+
+- **Mejora de la Comunicación**: Puente entre equipos técnicos y no técnicos
+- **Documentación de Procesos**: Visualización clara de flujos de trabajo de negocio
+- **Planificación de Sistemas**: Base para construir sistemas desde cero
+- **Mapeo de Recorrido del Usuario**: Visualización completa del ciclo de vida del usuario
 
 
-### Core Components
+### Elementos Principales
 
-Use case diagrams consist of **FOUR** fundamental elements:
+Los diagramas de actividad comprenden seis componentes esenciales:
 
-1. **Use Cases**: System functionality represented as ovals
-2. **Actors**: Users or external systems (stick figures)
-3. **Subsystems**: Grouped functionality within system boundaries
-4. **Relationships**: Connections showing interactions and dependencies
+1. **Estado Inicial**: Punto de inicio del proceso (círculo negro sólido)
+2. **Estado de Actividad/Acción**: Pasos o procesos individuales (rectángulos redondeados)
+3. **Flujo de Acción**: Flechas direccionales mostrando el flujo del proceso
+4. **Decisiones/Ramificación**: Formas de diamante representando puntos de elección
+5. **Guardas**: Condiciones que deben cumplirse para las transiciones
+6. **Estado Final**: Punto final del proceso (círculo negro sólido con anillo exterior)
 
 ---
-### Marketing Engine Example
+### Ejemplo de Servicio de Pedidos de Café
 
-The marketing engine use case diagram illustrates dual-actor scenarios:
+El servicio de pedidos de café demuestra cómo los diagramas de actividad capturan interacciones complejas de usuario:
 
-**Actor Roles:**
+#### **Flujo del Proceso**
 
-- **Marketing Specialist**: Administrative access and content creation
-- **Customer**: End-user interaction and consumption
+1. Usuario inicia pedido en línea
+2. Punto de decisión basado en selección del usuario
+3. Múltiples caminos dependiendo de las elecciones:
 
-**Relationship Types:**
+   - Búsqueda y selección de producto
+   - Visualización de producto y detalles
+   - Adición al carrito y gestión
+   - Checkout y procesamiento de pago
 
-- **Association**: Direct actor-to-use case connections
-- **Include**: Required functionality dependencies
-- **Extend**: Optional functionality extensions
+Este único diagrama encapsula toda la experiencia del usuario, proporcionando a los desarrolladores una hoja de ruta clara para la implementación de la aplicación.
 
-Different actors access the same use cases through different pathways, demonstrating how authorization systems control user behaviour and access rights.
+### Modelado de Experiencia de Usuario
 
-### Actor-Based Access Control
+Los diagramas de actividad sobresalen en el modelado de procesos de alto nivel porque se enfocan en actividades en lugar de detalles técnicos de implementación. Responden preguntas críticas:
 
-Use case diagrams effectively model complex authorization scenarios:
-
-- **Employee vs. Admin**: Different access levels to timesheet systems
-- **Customer vs. Specialist**: Varying capabilities within the same system
-- **Role-Based Permissions**: Clear visualisation of who can do what
+- ¿Qué sucede cuando los usuarios buscan productos?
+- ¿Cómo navegan los usuarios la selección de productos?
+- ¿Qué puntos de decisión existen en el recorrido del usuario?
+- ¿Cómo afectan las diferentes elecciones del usuario al flujo de trabajo?
 
 ---
 
 
-## ***4.    State Machine Diagrams***
+## ***3.    Diagramas de Casos de Uso***
 ---
-### Data Life-cycle Visualisation
+### Ilustración de Sistema de Autorización
 
-State machine diagrams represent one of computer science's fundamental concepts, **visualising how data and objects transition through different states during system life-cycle.**  
+Los diagramas de casos de uso **proporcionan visualmente un alto nivel de la funcionalidad del sistema y derechos de acceso del usuario.**  
 
-They focus on the various stages of system components and the conditions that trigger state changes.
+Son particularmente valiosos para diseñar sistemas de autorización, mostrando claramente qué diferentes tipos de usuarios pueden acceder y lograr dentro del sistema.
 
-#### **Core Purpose**
+#### **Aplicaciones Principales**
 
-- **State Transition Modeling**: How objects change over time
-- **Condition-Based Logic**: Rules governing state changes
-- **System Behaviour**: Dynamic aspects of system components
-- **Life-cycle Management**: Complete object life-cycle visualisation
+- **Diseño de Autorización**: Definir roles de usuario y permisos
+- **Definición de Alcance del Sistema**: Establecer límites para la funcionalidad del sistema
+- **Comunicación con Partes Interesadas**: Presentación clara de capacidades del sistema
+- **Planificación de Características**: Vista comprehensiva de características del sistema
 
 
-### Essential Elements
+### Componentes Principales
 
-State machine diagrams incorporate five key components:
+Los diagramas de casos de uso consisten en **CUATRO** elementos fundamentales:
 
-1. **Entry Point**: Initial state (solid black circle)
-2. **Choices**: Decision points determining transitions
-3. **Constraints**: Conditions governing state changes
-4. **States**: Stable conditions or situations (rectangles)
-5. **Transitions**: State-to-state movements (arrows)
-
----
-### Lead Funnel Example
-
-The lead funnel state machine demonstrates customer progression:
-
-#### **State Progression**
-
-- **Visitor**: Initial user state
-- **Converted**: Post-form submission state
-- **Lead**: Qualified prospect state
-- **Customer**: Final conversion state
-
-Each transition requires specific conditions, illustrating how business rules govern customer progression through the sales funnel.
+1. **Casos de Uso**: Funcionalidad del sistema representada como óvalos
+2. **Actores**: Usuarios o sistemas externos (figuras de palitos)
+3. **Subsistemas**: Funcionalidad agrupada dentro de límites del sistema
+4. **Relaciones**: Conexiones mostrando interacciones y dependencias
 
 ---
-### Comparison with Activity Diagrams
+### Ejemplo de Motor de Marketing
 
-State machine diagrams share similarities with activity diagrams but focus on different aspects:
+El diagrama de casos de uso del motor de marketing ilustra escenarios de actor dual:
 
-#### **What State Machine Focus on**
+#### **Roles de Actores**
 
-- Object states and transitions
-- Condition-based changes
-- Data life-cycle management
-
-
-#### **What Activity Diagram Focus on**
-
-- Process workflows
-- User activities
-- Sequential actions
+- **Especialista en Marketing**: Acceso administrativo y creación de contenido
+- **Cliente**: Interacción de usuario final y consumo
 
 
->**The choice between diagrams depends on whether you're modeling object states or process workflows.**
+#### **Tipos de Relaciones**
+
+- **Asociación**: Conexiones directas actor-a-caso de uso
+- **Include**: Dependencias de funcionalidad requerida
+- **Extend**: Extensiones de funcionalidad opcional
+
+Diferentes actores acceden a los mismos casos de uso a través de diferentes caminos, demostrando cómo los sistemas de autorización controlan el comportamiento del usuario y los derechos de acceso.
+
+
+### Control de Acceso Basado en Actores
+
+Los diagramas de casos de uso modelan efectivamente escenarios complejos de autorización:
+
+- **Empleado vs. Admin**: Diferentes niveles de acceso a sistemas de hojas de tiempo
+- **Cliente vs. Especialista**: Capacidades variables dentro del mismo sistema
+- **Permisos Basados en Roles**: Visualización clara de quién puede hacer qué
 
 ---
 
-## ***5.    Sequence Diagrams***
+
+## ***4.    Diagramas de Máquina de Estados***
 ---
+### Visualización del Ciclo de Vida de Datos
 
-### Message-Based System Design
+Los diagramas de máquina de estados representan uno de los conceptos fundamentales de las ciencias de la computación, **visualizando cómo los datos y objetos transicionan a través de diferentes estados durante el ciclo de vida del sistema.**  
 
-Sequence diagrams ***represent sophisticated system interactions through message passing***.     
+Se enfocan en las varias etapas de los componentes del sistema y las condiciones que disparan cambios de estado.
 
-Senior developers favour these diagrams because they model applications as systems of communicating components, both internal and external.   
+#### **Propósito Principal**
 
-They provide implementation-level detail that directly translates to code structure.
-
-#### **Strategic Value**
-
-- **Implementation Guidance**: Direct translation to code
-- **System Architecture**: Message-based system design
-- **Integration Planning**: External system communication
-- **Debugging Aid**: Understanding system message flow
+- **Modelado de Transición de Estados**: Cómo los objetos cambian con el tiempo
+- **Lógica Basada en Condiciones**: Reglas que gobiernan cambios de estado
+- **Comportamiento del Sistema**: Aspectos dinámicos de componentes del sistema
+- **Gestión del Ciclo de Vida**: Visualización completa del ciclo de vida del objeto
 
 
+### Elementos Esenciales
 
-### Implementation-Focused Elements
+Los diagramas de máquina de estados incorporan cinco componentes clave:
 
-Sequence diagrams comprise **FOUR critical components**:
-
-1. **Class Roles/Participants**: System components involved in interactions
-2. **Activation/Execution Occurrence**: Active processing periods (wide rectangles)
-3. **Messages** (And Responses): Communications between components (arrows)
-4. **Lifelines**: Vertical lines representing component existence over time
-
+1. **Punto de Entrada**: Estado inicial (círculo negro sólido)
+2. **Elecciones**: Puntos de decisión determinando transiciones
+3. **Restricciones**: Condiciones que gobiernan cambios de estado
+4. **Estados**: Condiciones o situaciones estables (rectángulos)
+5. **Transiciones**: Movimientos estado-a-estado (flechas)
 
 ---
-### Phone Parser Example
+### Ejemplo con el Embudo de Leads
 
-The phone parser sequence diagram illustrates complex system interactions:
+La máquina de estados del embudo de leads demuestra la progresión del cliente:
 
-#### **Message Flow**
+#### **Progresión de Estados**
 
-1. **Input**: Data to parse enters the system
-2. **Self-Message**: Parse engine processes internally ("delete all symbols except numbers")
-3. **External Message**: Validation request to digit length validator
-4. **Response Message**: Validation result (dotted arrow)
-5. **Output**: Parsed phone number result
+- **Visitante**: Estado inicial del usuario
+- **Convertido**: Estado post-envío de formulario
+- **Lead**: Estado de prospecto calificado
+- **Cliente**: Estado de conversión final
 
-This diagram provides complete input-output understanding, showing both the goal and the implementation pathway.
+Cada transición requiere condiciones específicas, ilustrando cómo las reglas de negocio gobiernan la progresión del cliente a través del embudo de ventas.
+
+---
+### Comparación con Diagramas de Actividad
+
+Los diagramas de máquina de estados comparten similitudes con los diagramas de actividad pero se enfocan en aspectos diferentes:
+
+#### **En qué se Enfoca la Máquina de Estados**
+
+- Estados de objetos y transiciones
+- Cambios basados en condiciones
+- Gestión del ciclo de vida de datos
+
+
+#### **En qué se Enfoca el Diagrama de Actividades**
+
+- Flujos de trabajo de procesos
+- Actividades de usuario
+- Acciones secuenciales
+
+
+>**La elección entre diagramas depende de si estás modelando estados de objetos o flujos de trabajo de procesos.**
+
+---
+
+
+## ***5.    Diagramas de Secuencia***
+---
+
+### Diseño de Sistemas Basado en Mensajes
+
+Los diagramas de secuencia ***representan interacciones sofisticadas del sistema a través del paso de mensajes***.     
+
+Los desarrolladores senior favorecen estos diagramas porque modelan aplicaciones como sistemas de componentes comunicantes, tanto internos como externos.   
+
+Proporcionan detalle a nivel de implementación que se traduce directamente a estructura de código.
+
+#### **Valor Estratégico**
+
+- **Guía de Implementación**: Traducción directa a código
+- **Arquitectura del Sistema**: Diseño de sistema basado en mensajes
+- **Planificación de Integración**: Comunicación de sistemas externos
+- **Ayuda de Depuración**: Entender el flujo de mensajes del sistema
+
+
+
+### Elementos Enfocados en Implementación
+
+Los diagramas de secuencia comprenden **CUATRO componentes críticos**:
+
+1. **Roles de Clase/Participantes**: Componentes del sistema involucrados en interacciones
+2. **Activación/Ocurrencia de Ejecución**: Períodos de procesamiento activo (rectángulos anchos)
+3. **Mensajes** (Y Respuestas): Comunicaciones entre componentes (flechas)
+4. **Líneas de Vida**: Líneas verticales representando la existencia del componente a través del tiempo
+
+
+---
+### Ejemplo de Analizador de Teléfonos
+
+El diagrama de secuencia del analizador de teléfonos ilustra interacciones complejas del sistema:
+
+#### **Flujo de Mensajes**
+
+1. **Entrada**: Datos a analizar entran al sistema
+2. **Auto-Mensaje**: Motor de análisis procesa internamente ("eliminar todos los símbolos excepto números")
+3. **Mensaje Externo**: Solicitud de validación al validador de longitud de dígitos
+4. **Mensaje de Respuesta**: Resultado de validación (flecha punteada)
+5. **Salida**: Resultado del número de teléfono analizado
+
+Este diagrama proporciona comprensión completa de entrada-salida, mostrando tanto el objetivo como el camino de implementación.
 
 ----
-### Input-Output System Thinking
+### Pensamiento de Sistemas Entrada-Salida
 
-Sequence diagrams promote systematic thinking about:
+Los diagramas de secuencia promueven pensamiento sistemático sobre:
 
-- **Method Inputs**: What data enters each component
-- **Expected Outputs**: What results each component produces
-- **Message Contracts**: Clear interface definitions
-- **System Dependencies**: Component interaction requirements
-
-
->**Understanding systems through message passing creates clear implementation roadmaps and simplifies complex system architecture into manageable communication patterns.**
-
----
+- **Entradas de Método**: Qué datos entran a cada componente
+- **Salidas Esperadas**: Qué resultados produce cada componente
+- **Contratos de Mensaje**: Definiciones claras de interfaz
+- **Dependencias del Sistema**: Requisitos de interacción de componentes
 
 
-## ***6.    Best Practices and Implementation Guidelines***
----
-### Activity Diagram Guidelines
-
-- Start with user entry points and identify all possible endpoints
-- Use clear, descriptive labels for activities and decision points
-- Keep diagrams focused on single processes or user journeys
-- Include all significant decision points and alternative paths
-- Validate workflows with business stakeholders
-
-### Use Case Diagram Recommendations
-
-- Clearly define system boundaries before identifying use cases
-- Focus on user goals rather than system features
-- Use consistent actor representations across diagrams
-- Document relationships between related use cases
-- Regularly review access rights and permissions with stakeholders
-
-### State Machine Diagram Best Practices
-
-- Identify all possible states before modeling transitions
-- Define clear conditions for each state transition
-- Include error states and exception handling
-- Document state entry and exit actions
-- Validate state logic with domain experts
-
-### Sequence Diagram Guidelines
-
-- Focus on significant message exchanges, avoid trivial interactions
-- Use consistent naming conventions for participants
-- Show both successful and error message flows
-- Include return messages for complex interactions
-- Align diagrams with actual implementation architecture
-
-
-
-### General Behavioural Diagram Tips
-
-- **Diagram Selection**: Choose diagrams based on specific modeling needs
-- **Stakeholder Alignment**: Match diagram complexity to audience technical level
-- **Iterative Refinement**: Continuously update diagrams as understanding evolves
-- **Implementation Traceability**: Ensure diagrams can guide actual development
-- **Cross-Diagram Consistency**: Maintain consistency across different diagram types
+>**Entender sistemas a través del paso de mensajes crea hojas de ruta claras de implementación y simplifica arquitectura compleja del sistema en patrones de comunicación manejables.**
 
 ---
 
 
-## ***7.    Diagram Selection Criteria***
+## ***6.    Buenas Prácticas y Directrices de Implementación***
 ---
-### Diagram Selection Framework
+### Directrices para Diagramas de Actividad
 
-Each behavioural diagram serves specific scenarios:
+- Empezar con puntos de entrada del usuario e identificar todos los endpoints posibles
+- Usar etiquetas claras y descriptivas para actividades y puntos de decisión
+- Mantener diagramas enfocados en procesos únicos o recorridos de usuario
+- Incluir todos los puntos de decisión significativos y caminos alternativos
+- Validar flujos de trabajo con partes interesadas del negocio
 
-### **Use Activity Diagrams When**
+### Recomendaciones para Diagramas de Casos de Uso
 
-- Modeling business processes
-- Communicating with non-technical stakeholders
-- Planning user experience workflows
-- Documenting system processes
+- Definir claramente límites del sistema antes de identificar casos de uso
+- Enfocarse en objetivos del usuario en lugar de características del sistema
+- Usar representaciones consistentes de actores a través de diagramas
+- Documentar relaciones entre casos de uso relacionados
+- Revisar regularmente derechos de acceso y permisos con partes interesadas
+
+### Buenas Prácticas para Diagramas de Máquina de Estados
+
+- Identificar todos los estados posibles antes de modelar transiciones
+- Definir condiciones claras para cada transición de estado
+- Incluir estados de error y manejo de excepciones
+- Documentar acciones de entrada y salida de estado
+- Validar lógica de estado con expertos del dominio
+
+### Directrices para Diagramas de Secuencia
+
+- Enfocarse en intercambios de mensajes significativos, evitar interacciones triviales
+- Usar convenciones de nomenclatura consistentes para participantes
+- Mostrar tanto flujos de mensajes exitosos como de error
+- Incluir mensajes de retorno para interacciones complejas
+- Alinear diagramas con arquitectura de implementación real
 
 
-#### **Use Use Case Diagrams When**
 
-- Defining system scope and boundaries
-- Designing authorization systems
-- Planning system features
-- Communicating with business analysts
+### Consejos Generales para Diagramas de Comportamiento
 
+- **Selección de Diagramas**: Elegir diagramas basados en necesidades específicas de modelado
+- **Alineación de Partes Interesadas**: Hacer coincidir complejidad del diagrama con nivel técnico de la audiencia
+- **Refinamiento Iterativo**: Actualizar continuamente diagramas conforme evoluciona la comprensión
+- **Trazabilidad de Implementación**: Asegurar que los diagramas puedan guiar el desarrollo real
+- **Consistencia Entre Diagramas**: Mantener consistencia a través de diferentes tipos de diagramas
 
-#### **Use State Machine Diagrams When**
-
-- Modeling object life-cycles
-- Designing state-dependent behaviour
-- Planning condition-based logic
-- Understanding data transitions
+---
 
 
-#### **Use Sequence Diagrams When**
+## ***7.    Criterios de Selección de Diagramas***
+---
+### Marco de Selección de Diagramas
 
-- Designing system interactions
-- Planning API integrations
-- Understanding message flows
-- Creating implementation blueprints
+Cada diagrama comportamental sirve escenarios específicos:
+
+### **Cuándo Usar Diagramas de Actividad**
+
+- Modelar procesos de negocio
+- Comunicar con partes interesadas no técnicas
+- Planificar flujos de trabajo de experiencia de usuario
+- Documentar procesos del sistema
+
+
+### **Cuándo Usar Diagramas de Casos de Uso**
+
+- Definir alcance y límites del sistema
+- Diseñar sistemas de autorización
+- Planificar características del sistema
+- Comunicar con analistas de negocio
+
+
+### **Cuándo Usar Diagramas de Máquina de Estados**
+
+- Modelar ciclos de vida de objetos
+- Diseñar comportamiento dependiente de estado
+- Planificar lógica basada en condiciones
+- Entender transiciones de datos
+
+
+### **Cuándo Usar Diagramas de Secuencia**
+
+- Diseñar interacciones del sistema
+- Planificar integraciones de API
+- Entender flujos de mensajes
+- Crear planos de implementación
 
 ---
