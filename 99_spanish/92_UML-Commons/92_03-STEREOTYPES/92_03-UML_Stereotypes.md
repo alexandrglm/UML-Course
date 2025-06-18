@@ -1,487 +1,507 @@
-| Guide      | Tittle                                             |
-| ---------- | -------------------------------------------------- |
-| 06-152     | Introduction to UML Components and Common Elements |
-| 06-153     | Common UML Components: Frames                      |
-| 06-154     | Common UML Components: Classifiers                 |
-| **06-155** | **Common UML Components. Stereotypes**             |
-| 06-156     | Common UML Components: Comments and Notes          |
-| 06-157     | Common UML Components: Dependencies                |
-| 06-158     | Common UML Components: Features and Properties     |
-| 06-159     | Quiz:   Introduction to UML                        |
+|Guía|Título|
+|---|---|
+|06-152|Introducción a los Componentes UML y Elementos Comunes|
+|06-153|Componentes Comunes de UML: Marcos (Frames)|
+|06-154|Componentes Comunes de UML: Clasificadores (Classifiers)|
+|**06-155**|**Componentes Comunes de UML: Estereotipos (Stereotypes)**|
+|06-156|Componentes Comunes de UML: Comentarios y Notas|
+|06-157|Componentes Comunes de UML: Dependencias|
+|06-158|Componentes Comunes de UML: Características y Propiedades|
+|06-159|Cuestionario: Introducción a UML|
 
 ---
 
-# 06-155: UML     StEREOTYPES
+# 06-155: ESTEREOTIPOS UML
 
+### 1. Qué son los ESTEREOTIPOS
 
-### 1. What STEREOTYPES are
+- **1.1** Definición y Propósito
+- **1.2** Por Qué los Estereotipos Parecen Extraños
+- **1.3** Cuándo y Dónde Usarlos
 
-- **1.1** Definition and Purpose
-- **1.2** Why Stereotypes Look Strange
-- **1.3** When and Where to Use Them
+### 2. Sintaxis y Notación de Estereotipos
 
-### 2. Stereotype Syntax and Notation
+- **2.1** Reglas de Sintaxis Básicas
+- **2.2** Representación Visual
 
-- **2.1** Basic Syntax Rules
-- **2.2** Visual Representation
+### 3. Entendiendo la Extensión de Metaclases
 
-### 3. Understanding Metaclass Extension
+- **3.1** Qué Significa "Extiende una Metaclase"
+- **3.2** Traducción de Abstracto a Práctico
+- **3.3** Beneficios de Nomenclatura Estandarizada
 
-- **3.1** What "Extends a Metaclass" Means
-- **3.2** Abstract to Practical Translation
-- **3.3** Standardized Naming Benefits
+### 4. Aplicaciones Comunes de Estereotipos
 
-### 4. Common Stereotype Applications
+- **4.1** Patrones Modelo-Vista-Controlador (MVC)
+- **4.2** Representación de Patrones Arquitectónicos
+- **4.3** Estereotipos Específicos de Framework
+- **4.4** Modelado Específico de Dominio
 
-- **4.1** Model-View-Controller (MVC) Patterns
-- **4.2** Architectural Pattern Representation
-- **4.3** Framework-Specific Stereotypes
-- **4.4** Domain-Specific Modeling
+### 5. Ejemplos Prácticos
 
-### 5. Practical Examples
+- **5.1** Estereotipos de Arquitectura MVC
+- **5.2** Patrones de Aplicaciones Empresariales
+- **5.3** Estereotipos de Desarrollo Web
+- **5.4** Estereotipos de Modelado de Base de Datos
 
-- **5.1** MVC Architecture Stereotypes
-- **5.2** Enterprise Application Patterns
-- **5.3** Web Development Stereotypes
-- **5.4** Database Modeling Stereotypes
+### 6. Mejores Prácticas - Consejos
 
-### 6. Best Practices - Tips
-
-- **6.1** When to Use Stereotypes
-- **6.2** Clarity vs Complexity
-- **6.3** Team Communication
-- **6.4** Tool Considerations
-
+- **6.1** Cuándo Usar Estereotipos
+- **6.2** Claridad vs Complejidad
+- **6.3** Comunicación en Equipo
+- **6.4** Consideraciones de Herramientas
 
 ---
 
-## 1. What STEREOTYPES are
+
+## ***1. Qué son los ESTEREOTIPOS***
 ---
-### 1.1 Definition and Purpose
 
-**Stereotypes** are UML extension mechanism that allows to:
+### 1.1 Definición y Propósito
 
-* #### **create new types of modeling elements ... 
-* #### ... by extending existing UML metaclasses.
+Los **Estereotipos** son un mecanismo de extensión UML que permite:
 
-They provide a way to give more **practical and meaningful names** to abstract or complex system components.
+- #### **Crear nuevos tipos de elementos de modelado ...
+    
+- #### ... extendiendo metaclases UML existentes.
+    
 
+Proporcionan una forma de dar nombres más **prácticos y significativos** a componentes de sistema abstractos o complejos.
 
-#### Purpose
+#### Propósito
 
-- **Clarify abstract concepts** using familiar terminology
-- **Extend UML vocabulary** for specific domains or frameworks
-- **Improve communication** between team members
-- **Standardize naming conventions** across projects
-
----
-### 1.2 Why Stereotypes Look Strange
-
-Stereotypes can appear confusing for several reasons:
-
-- **Not used in every diagram** - Selective application makes them less familiar
-- **Abstract nature** - They represent conceptual extensions rather than concrete elements
-- **Unfamiliar syntax** - Double angle brackets `<<stereotype>>` are unique to UML
-- **Incorrect implementation** - Many people misuse them, adding to confusion
-
-
-Understanding their purpose helps demystify their appearance and usage.
-
----
-### 1.3 When and Where to Use Them
-
-#### **Appropriate scenarios**
-
-- **Architectural pattern documentation** - MVC, MVP, MVVM
-- **Framework-specific modeling** - React, Spring, Angular, .NET components
-- **Domain-specific applications** - Business process modeling, embedded systems
-- **Team communication improvement** - Making abstract concepts concrete
-
-#### **Diagram types where commonly used**
-
-- Class diagrams (most common)
-- Component diagrams
-- Package diagrams
-- Use case diagrams (occasionally)
+- **Clarificar conceptos abstractos** usando terminología familiar
+- **Extender vocabulario UML** para dominios o frameworks específicos
+- **Mejorar comunicación** entre miembros del equipo
+- **Estandarizar convenciones de nomenclatura** a través de proyectos
 
 ---
 
-## 2. Stereotype Syntax and Notation
----
-### 2.1 Basic Syntax Rules
+### 1.2 Por Qué los Estereotipos Parecen Extraños
 
-#### **Standard notation and placement**
+Los estereotipos pueden parecer confusos por varias razones:
+
+- **No se usan en cada diagrama** - La aplicación selectiva los hace menos familiares
+
+- **Naturaleza abstracta** - Representan extensiones conceptuales en lugar de elementos concretos
+
+- **Sintaxis desconocida** - Los corchetes angulares dobles `<<estereotipo>>` son únicos de UML
+
+- **Implementación incorrecta** - Muchas personas los usan mal, añadiendo confusión
+
+Entender su propósito ayuda a desmitificar su apariencia y uso.
+
+---
+
+### 1.3 Cuándo y Dónde Usarlos
+
+#### **Escenarios apropiados**
+
+- **Documentación de patrones de  arquitectura** - Modelos **MVC, MVP, MVVM**
+
+- **Modelado específico de framework** - Componentes React, Spring, Angular, .NET
+
+- **Aplicaciones específicas de dominio** - Modelado de procesos de negocio, sistemas embebidos
+
+- **Mejora de comunicación en equipo** - Hacer concretos conceptos abstractos
+
+#### **Tipos de diagrama donde se usan comúnmente**
+
+- Diagramas de Clases (más común)
+- Diagramas de Componentes
+- Diagramas de Paquetes
+- Diagramas de Casos de uso (ocasionalmente)
+
+---
+
+
+## ***2. Sintaxis y Notación de Estereotipos***
+---
+
+### 2.1 Reglas de Sintaxis Básicas
+
+#### **Notación estándar y posicionamiento**
+
 ```
-<<stereotype_name>>
-ElementName
+<<nombre_estereotipo>>
+NombreElemento
 ```
 
-#### **Key elements**
+#### **Elementos clave**
 
-- ##### **Double angle brackets** - `<<` and `>>` (*guillemets*)
-
-- ##### **Stereotype name** - Descriptive identifier
-
-- ##### **Placement** - Above or before the element name
-
-- ##### **Case sensitivity** - Usually lowercase or camelCase
+- ##### **Corchetes angulares dobles** - `<<` y `>>` (_guillemets_)
+    
+- ##### **Nombre del estereotipo** - Identificador descriptivo
+    
+- ##### **Posicionamiento** - Arriba o antes del nombre del elemento
+    
+- ##### **Sensibilidad de mayúsculas** - Usualmente minúsculas o camelCase
+    
 
 ---
-### 2.2 Visual Representation
 
-#### **Examples of proper notation**
+### 2.2 Representación Visual
+
+#### **Ejemplos de notación apropiada**
 
 ![IMG](./06-155_IMG2.png)
 
 ---
 
-## 3. Understanding Metaclass Extension
+
+## 3. Entendiendo la Extensión de Metaclases
+---
+
+### 3.1 Qué Significa "Extiende una Metaclase"
+
+#### **Metaclase**
+
+> **METACLASE** = La "clase de una clase" - lo que define qué tipos de elementos pueden existir en UML
+
+#### **Proceso de extensión**
+
+- Tomar un tipo de elemento UML existente (como Clase o Componente)
+    
+- Agregar significado específico a través de un estereotipo
+    
+- Crear un nuevo tipo de elemento "virtual" con semántica mejorada
+    
+
+##### **Ejemplo**
+
+- **Metaclase base:** Clase
+- **Estereotipo:** `<<controller>>`
+- **Resultado:** Una clase que específicamente representa un controlador en arquitectura MVC
 
 ---
 
-### 3.1 What "Extends a Metaclass" Means
+### 3.2 Traducción de Abstracto a Práctico
 
-#### **Metaclass**
-
-> **METACLASS** = The "class of a class" - what defines kinds of elements can exist in UML
-
-#### **Extension process**
-
-- Take an existing UML element type (like Class or Component)
-
-- Add specific meaning through a stereotype
-
-- Create a new "virtual" element type with enhanced semantics
-
-##### **Example**
-
-- **Base metaclass:** Class
-- **Stereotype:** `<<controller>>`
-- **Result:** A class that specifically represents a controller in MVC architecture
-
----
-
-### 3.2 Abstract to Practical Translation
-
-##### **Problem scenario**
+##### **Escenario problemático**
 
 ```
-Abstract UML Terms   → What Developers See
-───────────────────── ─────────────────────
+Términos UML Abstractos   → Lo que Ven los Desarrolladores
+─────────────────────────  ──────────────────────────────
 
-Boundary "What is this?"
-Control "I on't understand"
-Entity "How do I implement this?"
+        Boundary                  "¿Qué es esto?"
+        Control                     "No entiendo"
+        Entity                 "¿Cómo implemento esto?"
 ```
 
-##### **Solution with stereotypes**
+##### **Solución con estereotipos**
 
 ```
-Abstract Terms + Stereotypes  → Clear Understanding
-────────────────────────────── ───────────────────
+Términos Abstractos + Estereotipos  → Comprensión Clara
+───────────────────────────────────  ──────────────────
 
-Boundary → <<view>> "User interface component"
-Control → <<controller>> "Business logic handler"
-Entity → <<model>> "Data representation"
+          Boundary → <<view>>        "Componente de interfaz de usuario"
+          Control → <<controller>>   "Manejador de lógica de negocio"
+          Entity → <<model>>         "Representación de datos"
 ```
 
 ---
 
-### 3.3 Standardized Naming Benefits
+### 3.3 Beneficios de Nomenclatura Estandarizada
 
-##### 😩 **Before stereotypes**
+##### 😩 **Antes de los estereotipos**
 
-- Developers confused by abstract UML terminology
-- Inconsistent interpretation of diagram elements
-- Difficulty connecting UML to actual code implementation
-- Team communication problems
+- Desarrolladores confundidos por terminología UML abstracta
+- Interpretación inconsistente de elementos de diagrama
+- Dificultad conectando UML con implementación de código actual
+- Problemas de comunicación en equipo
 
-#### 🗿 **After stereotypes**
+#### 🗿 **Después de los estereotipos**
 
-- **Common vocabulary** - Everyone understands `<<controller>>`
-- **Implementation guidance** - Clear mapping to code patterns
-- **Framework alignment** - Matches popular architectural patterns
-- **Faster onboarding** - New developers recognize familiar terms
+- **Vocabulario común** - Todos entienden `<<controller>>`
+- **Guía de implementación** - Mapeo claro a patrones de código
+- **Alineación de framework** - Coincide con patrones arquitectónicos populares
+- **Incorporación más rápida** - Nuevos desarrolladores reconocen términos familiares
 
 ---
 
-## 4. Common Stereotype Applications
+
+## ***4. Aplicaciones Comunes de Estereotipos***
 ---
 
-### ***4.1 Model-View-Controller (MVC) Patterns***
+### _**4.1 Patrones Modelo-Vista-Controlador (MVC)**_
 
-#### **Standard MVC stereotypes**
+#### **Estereotipos MVC estándar**
 
-| Stereotype     | Purpose             | Typical Responsibilities                        |
-| -------------- | ------------------- | ----------------------------------------------- |
-| `<<model>>`      | Data representation | Business logic, data validation, persistence    |
-| `<<view>>`       | User interface      | Display data, capture user input, presentation  |
-| `<<controller>>` | Flow control        | Handle requests, coordinate model/view, routing |
+|Estereotipo|Propósito|Responsabilidades Típicas|
+|---|---|---|
+|`<<model>>`|Representación de datos|Lógica de negocio, validación de datos, persistencia|
+|`<<view>>`|Interfaz de usuario|Mostrar datos, capturar entrada del usuario, presentación|
+|`<<controller>>`|Control de flujo|Manejar requests, coordinar modelo/vista, enrutamiento|
 
-##### **Example implementation**
+##### **Ejemplo de implementación**
 
 ```
  <<model>>      <<controller>>      <<view>>
-User           UserController      serProfilePage
-├─ name         ├─ createUser()     ├─ displayProfile()
-├─ email        ├─ updateUser()     ├─ editProfile()
-└─ validate()   └─ deleteUser()     └─ showErrors()
+Usuario        ControladorUsuario  PaginaPerfilUsuario
+├─ nombre      ├─ crearUsuario()   ├─ mostrarPerfil()
+├─ email       ├─ actualizarUsuario() ├─ editarPerfil()
+└─ validar()   └─ eliminarUsuario() └─ mostrarErrores()
 ```
 
 ---
 
-### ***4.2 Architectural Pattern Representation***
+### _**4.2 Representación de Patrones Arquitectónicos**_
 
-#### **Enterprise application stereotypes**
+#### **Estereotipos de aplicaciones empresariales**
 
-- `<<service>>` - Business service layer
-- `<<repository>>` - Data access layer
-- `<<factory>>` - Object creation patterns
-- `<<facade>>` - Simplified interface to complex subsystems
-- `<<adapter>>` - Interface adaptation between incompatible components
-
----
-
-### ***4.3 Framework-Specific Stereotypes***
-
-#### **Spring Framework examples**
-
-- `<<component>>` - Spring-managed component
-- `<<restController>>` - REST API endpoint handler
-- `<<service>>` - Business service bean
-- `<<repository>>` - Data access repository
-
-##### **Angular Framework examples**
-
-- `<<component>>` - Angular component
-- `<<servie>>` - Injectable service
-- `<<directive>>` - Custom directive
-- `<<pipe>>` - Data transformation pipe
-
----
-### ***4.4 Domain-Specific Modeling***
-
-#### **Web development stereotypes**
-
-- `<<api>>` - Web API interface
-- `<<middleware>>` - Request processing middleware
-- `<<validator>>` - Input validation component
-- `<<authenticator>>` - Authentication handler
-
-#### **Database modeling stereotypes**
-
-- `<<entity>>` - Database entity/table
-- `<<valueObject>>` - Immutable value representation
-- `<<aggregate>>` - Domain aggregate root
-- `<<specification>>` - Business rule specification
+- `<<service>>` - Capa de servicio de negocio
+- `<<repository>>` - Capa de acceso a datos
+- `<<factory>>` - Patrones de creación de objetos
+- `<<facade>>` - Interfaz simplificada a subsistemas complejos
+- `<<adapter>>` - Adaptación de interfaz entre componentes incompatibles
 
 ---
 
-## 5. Practical Examples
----
-### ***5.1 MVC Architecture Stereotypes***
+### _**4.3 Estereotipos Específicos de Framework**_
 
-#### 😩 **Traditional UML (confusing)**
+#### **Ejemplos de Spring Framework**
+
+- `<<component>>` - Componente gestionado por Spring
+- `<<restController>>` - Manejador de endpoint de API REST
+- `<<service>>` - Bean de servicio de negocio
+- `<<repository>>` - Repositorio de acceso a datos
+
+##### **Ejemplos de Framework Angular**
+
+- `<<component>>` - Componente Angular
+- `<<service>>` - Servicio inyectable
+- `<<directive>>` - Directiva personalizada
+- `<<pipe>>` - Pipe de transformación de datos
+
+---
+
+### _**4.4 Modelado Específico de Dominio**_
+
+#### **Estereotipos de desarrollo web**
+
+- `<<api>>` - Interfaz de Web API
+- `<<middleware>>` - Middleware de procesamiento de requests
+- `<<validator>>` - Componente de validación de entrada
+- `<<authenticator>>` - Manejador de autenticación
+
+#### **Estereotipos de modelado de base de datos**
+
+- `<<entity>>` - Entidad/tabla de base de datos
+- `<<valueObject>>` - Representación de valor inmutable
+- `<<aggregate>>` - Raíz de agregado de dominio
+- `<<specification>>` - Especificación de regla de negocio
+
+---
+
+
+## ***5. Ejemplos Prácticos***
+---
+
+### _**5.1 Estereotipos de Arquitectura MVC**_
+
+#### 😩 **UML tradicional (confuso)**
 
 ```
 ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
 │ Boundary    │ │ Control     │ │ Entity      │
-│ UserForm    │ │ UserHandler │ │ UserData    │
+│ FormUsuario │ │ ManejadorUs │ │ DatosUsuario│
 └─────────────┘ └─────────────┘ └─────────────┘
 ```
 
-### 🗿 **With stereotypes (clear)**
+### 🗿 **Con estereotipos (claro)**
 
 ```
-┌─────────────┐ ┌───────────────┐ ┌───────────────┐
-│ <<view>>    │ │<<controller>> │ │ <<model>>     │
-│ UserForm    │ │ UserHandler   │ │ UserData      │
-├─────────────┤ ├───────────────┤ ├───────────────┤
-│ +render()   │ │ +process()    │ │ +save()       │
-│ +validate() │ │ +route()      │ │ +validate()   │
-└─────────────┘ └───────────────┘ └───────────────┘
+┌──────────────┐ ┌────────────────┐ ┌────────────────┐
+│ <<view>>     │ │<<controller>>  │ │ <<model>>      │
+│ FormUsuario  │ │ ManejadorUs    │ │ DatosUsuario   │
+├──────────────┤ ├────────────────┤ ├────────────────┤
+│ +renderizar()│ │ +procesar()    │ │ +guardar()     │
+│ +validar()   │ │ +enrutar()     │ │ +validar()     │
+└──────────────┘ └────────────────┘ └────────────────┘
 ```
 
 ---
 
-### ***5.2 Enterprise Application Patterns***
+### _**5.2 Patrones de Aplicaciones Empresariales**_
 
-#### **Layered architecture with stereotypes**
+#### **Arquitectura por capas con estereotipos**
 
 ```
 ┌─────────────────────────────────────┐
 │ <<controller>>                      │
-│ OrderController                     │
+│ ControladorOrden                    │
 ├─────────────────────────────────────┤
-│ + createOrder()                     │
-│ + updateOrder()                     │
+│ + crearOrden()                      │
+│ + actualizarOrden()                 │
 └─────────────────────────────────────┘
 │
 ▼
 
 ┌─────────────────────────────────────┐
 │ <<service>>                         │
-│ OrderService                        │
+│ ServicioOrden                       │
 ├─────────────────────────────────────┤
-│ + processOrder()                    │
-│ + calculateTotal()                  │
+│ + procesarOrden()                   │
+│ + calcularTotal()                   │
 └─────────────────────────────────────┘
 │
 ▼
 
 ┌─────────────────────────────────────┐
 │ <<repository>>                      │
-│ OrderRepository                     │
+│ RepositorioOrden                    │
 ├─────────────────────────────────────┤
-│ + save()                            │
-│ + findById()                        │
+│ + guardar()                         │
+│ + buscarPorId()                     │
 └─────────────────────────────────────┘
 ```
 
 ---
 
-### ***5.3 Web Development Stereotypes***
+### _**5.3 Estereotipos de Desarrollo Web**_
 
-#### **REST API modeling**
+#### **Modelado de API REST**
 
 ```
-┌───────────────────┐
-│ <<restController>>│
-│ UserAPI           │
-├───────────────────┤
-│ + GET /users      │
-│ + POST /users     │
-│ + PUT /users/:id  │
-│ + DELETE /users   │
-└───────────────────┘
+┌────────────────────┐
+│ <<restController>> │
+│ APIUsuario         │
+├────────────────────┤
+│ + GET /usuarios    │
+│ + POST /usuarios   │
+│ + PUT /usuarios/:id│
+│ + DELETE /usuarios │
+└────────────────────┘
 │
 ▼
-
-┌───────────────────┐
-│ <<service>>       │
-│ UserService       │
-├───────────────────┤
-│ + createUser()    │
-│ + findUser()      │
-│ + updateUser()    │
-│ + deleteUser()    │
-└───────────────────┘
+┌──────────────────────┐
+│ <<service>>          │
+│ ServicioUsuario      │
+├──────────────────────┤
+│ + crearUsuario()     │
+│ + buscarUsuario()    │
+│ + actualizarUsuario()│
+│ + eliminarUsuario()  │
+└──────────────────────┘
 ```
 
 ---
 
-### ***5.4 Database Modeling Stereotypes***
+### _**5.4 Estereotipos de Modelado de Base de Datos**_
 
-#### **Domain-driven design example**
+#### **Ejemplo de diseño dirigido por dominio**
 
 ```
 ┌─────────────────┐
 │ <<aggregate>>   │
-│ Order           │
+│ Orden           │
 ├─────────────────┤
-│ - id:OrderId    │
-│ - total: Money  │
-│ + addItem()     │
-│ + calculate()   │
+│ - id:IdOrden    │
+│ - total: Dinero │
+│ + agregarItem() │
+│ + calcular()    │
 └─────────────────┘
 │
 ▼
-
 ┌─────────────────┐
 │ <<entity>>      │
-│ OrderItem       │
+│ ItemOrden       │
 ├─────────────────┤
-│ - id: ItemId    │
-│ - quantity: int │
-│ - price: Money  │
+│ - id: IdItem    │
+│ - cantidad: int │
+│ - precio: Dinero│
 └─────────────────┘
 ```
 
 ---
 
-## 6. Best Practices / TIps
+
+## ***6. Mejores Prácticas / Consejos***
 ---
 
-### 6.1 When to Use Stereotypes
-
-### 👌 **Use stereotypes when**
-
-- **Abstract UML elements need clarification** for the team
-
-- **Architectural patterns** need explicit documentation
-
-- **Framework-specific components** require identification
-
-- **Domain terminology** differs from standard UML vocabulary
-
-- **Code generation** tools need additional semantic information
+### 6.1 Cuándo Usar Estereotipos
 
 
+### 👌 **Usa estereotipos cuando**
 
-### ❌ **AVOID stereotypes when**
+- **Elementos UML abstractos necesiten clarificación** para el equipo
+    
+- **Patrones arquitectónicos** necesiten documentación explícita
+    
+- **Componentes específicos de framework** requieran identificación
+    
+- **Terminología de dominio** difiere del vocabulario UML estándar
+    
+- **Herramientas de generación de código** necesiten información semántica adicional
+    
 
-- Standard UML notation is already clear
+### ❌ **EVITA estereotipos cuando**
 
-- Adding unnecessary complexity to simple diagrams
-
-- Team members are unfamiliar with the stereotype meanings
-
-- Diagrams become cluttered with too many stereotypes
+- La notación UML estándar ya es clara
+    
+- Agrega complejidad innecesaria a diagramas simples
+    
+- Los miembros del equipo no están familiarizados con los significados del estereotipo
+    
+- Los diagramas se saturan con demasiados estereotipos
+    
 
 ---
-### 6.2 Clarity vs Complexity
 
-#### 🗿 **Good practice - Clear and helpful**
+### 6.2 Claridad vs Complejidad
+
+#### 🗿 **Buena práctica - Claro y útil**
 
 ```
 <<controller>>
-UserController
+ControladorUsuario
 
-+ handleLogin()
-+ handleRegistration()
++ manejarLogin()
++ manejarRegistro()
 ```
 
-#### 😩 **Poor practice - Overly detailed**
+#### 😩 **Mala práctica - Excesivamente detallado**
 
 ```
 <<springMvcRestControllerWithJsonResponseHandling>>
-
-UserController
+ControladorUsuario
 ```
 
+### **Pautas**
 
-### **Guidelines**
-
-- **Keep stereotype names short** and meaningful
-- **Use established conventions** when possible
-- **Priorise clarity** over technical precision
-- **Consider your audience** - what will they understand?
-
----
-### 6.3 Team Communication
-
-### **Establishing stereotype standards**
-
-- **Create a team glossary** of approved stereotypes
-- **Document stereotype meanings** and usage guidelines
-- **Use consistent naming** across all project diagrams
-- **Train team members** on stereotype semantics
-- **Review and validate** stereotype usage in design sessions
+- **Mantén nombres de estereotipos cortos** y significativos
+- **Usa convenciones establecidas** cuando sea posible
+- **Prioriza claridad** sobre precisión técnica
+- **Míralo desde la parte del receptor** - ¿qué entenderán?
 
 ---
-### 6.4 Tool Considerations
 
-### **UML tool support**
+### 6.3 Comunicación en Equipo
 
-- **Check tool capabilities** - not all tools support custom stereotypes
-- **Use standard profiles** when available (UML profiles for specific domains)
-- **Consider code generation** - some tools generate code based on stereotypes
-- **Export compatibility** - ensure stereotypes survive diagram exports
+### **Estableciendo estándares de estereotipos**
 
+- **Crea un glosario de equipo** de estereotipos aprobados
+- **Documenta significados de estereotipos** y pautas de uso
+- **Usa nomenclatura consistente** a través de todos los diagramas del proyecto
+- **Entrena a miembros del equipo** en semántica de estereotipos
+- **Revisa y valida** el uso de estereotipos en sesiones de diseño
 
-### **Code generation benefits**
+---
 
-- Stereotypes can guide automatic (and manual) code generation
-- Framework-specific templates can be applied
-- Architectural patterns can be scaffolded automatically
-- Consistency between model and implementation improv
+### 6.4 Consideraciones de Herramientas
+
+### **Soporte de herramientas UML**
+
+- **Verifica capacidades de herramientas** - no todas las herramientas soportan estereotipos personalizados
+- **Usa perfiles estándar** cuando estén disponibles (perfiles UML para dominios específicos)
+- **Considera generación de código** - algunas herramientas generan código basado en estereotipos
+- **Compatibilidad de exportación** - asegura que los estereotipos sobrevivan las exportaciones de diagramas
+
+### **Beneficios de generación de código**
+
+- Los estereotipos pueden guiar generación de código automática (y manual)
+- Se pueden aplicar plantillas específicas de framework
+- Los patrones arquitectónicos se pueden estructurar automáticamente
+- Mejora la consistencia entre modelo e implementación
+
+---

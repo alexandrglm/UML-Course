@@ -1,13 +1,13 @@
-|Guía|Título|
-|---|---|
-|06-152|Introducción a los Componentes UML y Elementos Comunes|
-|06-153|Componentes Comunes de UML: Marcos (Frames)|
-|**06-154**|**Componentes Comunes de UML: Clasificadores (Classifiers)**|
-|06-155|Componentes Comunes de UML: Estereotipos (Stereotypes)|
-|06-156|Componentes Comunes de UML: Comentarios y Notas|
-|06-157|Componentes Comunes de UML: Dependencias|
-|06-158|Componentes Comunes de UML: Características y Propiedades|
-|06-159|Cuestionario: Introducción a UML|
+| Guía       | Título                                                       |
+| ---------- | ------------------------------------------------------------ |
+| 06-152     | Introducción a los Componentes UML y Elementos Comunes       |
+| 06-153     | Componentes Comunes de UML: Marcos (Frames)                  |
+| **06-154** | **Componentes Comunes de UML: Clasificadores (Classifiers)** |
+| 06-155     | Componentes Comunes de UML: Estereotipos (Stereotypes)       |
+| 06-156     | Componentes Comunes de UML: Comentarios y Notas              |
+| 06-157     | Componentes Comunes de UML: Dependencias                     |
+| 06-158     | Componentes Comunes de UML: Características y Propiedades    |
+| 06-159     | Cuestionario: Introducción a UML                             |
 
 ---
 
