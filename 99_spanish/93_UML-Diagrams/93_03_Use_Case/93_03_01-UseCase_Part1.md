@@ -55,7 +55,7 @@ Los Diagramas de Casos de Uso consisten en **CUATRO elementos fundamentales** qu
 ---
 #### **Representación Visual**
 
-![medium](./07-171_IMG1.png)
+![medium](./07-172_IMG1.png)
 Óvalos o formas elípticas conteniendo descripciones de acciones
 
 #### **Características**
@@ -93,7 +93,7 @@ Los casos de uso deben comunicar claramente las características disponibles a l
 #### **Representación Visual** 
 Figuras de palitos o símbolos de actores posicionados fuera del límite del sistema
 
-![medium](./07-171_IMG2.png)
+![medium](./07-172_IMG2.png)
 
 #### **Definición** 
 
@@ -127,7 +127,7 @@ En arquitecturas impulsadas por API, puede que nunca tengas usuarios humanos dir
 ---
 #### **Representación Visual** 
 Cajas rectangulares grandes que contienen casos de uso relacionados y otros elementos
-![medium](./07-171_IMG3.png)
+![medium](./07-172_IMG3.png)
 
 #### **Propósito**
 Organizar y agrupar funcionalidad relacionada dentro de límites lógicos del sistema
@@ -174,7 +174,7 @@ Externo al Panel Web:
 
 Líneas conectando actores a casos de uso, típicamente con flechas indicando dirección de interacción
 
-![medium](./07-171_IMG4.png)
+![medium](./07-172_IMG4.png)
 
 ## **Tipos de Líneas de Relación:
 

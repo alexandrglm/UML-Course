@@ -1,9 +1,9 @@
 	#### 3.2 Actividad
 
-| Guía       | Título                                                                                    |
-| ---------- | ----------------------------------------------------------------------------------------- |
-| **06-168** | **Elementos de un Diagrama de Actividad UML**                                             |
-| 06-169     | Ejemplo: Cómo Diseñar un Diagrama de Actividad para un Sistema de Calificaciones en Línea |
+| Guía   | Título                                                                  |
+| ------ | ----------------------------------------------------------------------- |
+| **06-168** | **Elementos de un Diagrama de Actividad UML**                               |
+| 06-169 | Ejemplo: Diagrama de Actividad para un Sistema de Calificación en Línea |
 
 ----
 # 06-168:  Diagramas de Actividad

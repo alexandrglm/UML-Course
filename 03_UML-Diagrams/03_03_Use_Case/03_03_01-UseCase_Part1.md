@@ -56,7 +56,7 @@ Use Case Diagrams consist of **FOUR fundamental elements** which work together t
 ---
 #### **Visual Representation**
 
-![medium](./07-171_IMG1.png)
+![medium](./07-172_IMG1.png)
 Ovals or elliptical shapes containing action descriptions
 
 #### **Characteristics**
@@ -94,7 +94,7 @@ Use cases should clearly communicate available features to developers, enabling 
 #### **Visual Representation** 
 Stick figures or actor symbols positioned outside the system boundary
 
-![medium](./07-171_IMG2.png)
+![medium](./07-172_IMG2.png)
 
 #### **Definition** 
 
@@ -128,7 +128,7 @@ In API-driven architectures, you may never have direct human users. Instead, var
 ---
 #### **Visual Representation** 
 Large rectangular boxes that contain related use cases and other elements
-![medium](./07-171_IMG3.png)
+![medium](./07-172_IMG3.png)
 
 #### **Purpose**
 Organize and group related functionality within logical system boundaries
@@ -175,7 +175,7 @@ External to Web Dashboard:
 
 Lines connecting actors to use cases, typically with arrows indicating direction of interaction
 
-![medium](./07-171_IMG4.png)
+![medium](./07-172_IMG4.png)
 
 ## **Types of Relationship Lines:
 

@@ -9,7 +9,7 @@
 # 07-176: Diagramas de Despliegue - Ejemplo
 
 
-1. Caso de Uso Real: Servicio de Solicitud de Música   
+1. Caso de Uso Real: Servicio de Solicitud de Canciones   
 
 	* Visión General de la Arquitectura del Sistema
 	* Análisis del Nodo Frontend
@@ -31,7 +31,7 @@
 
 
 
-## ***1.    Caso Real:    Servicio de Solicitud de Canciones***
+## ***1.    Caso Real:    Servicio de Solicitud de Canciones
 ---
 
 ![large](./07-176_IMG1.png)
