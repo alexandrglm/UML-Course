@@ -9,6 +9,10 @@
 | 06-150 | UML Overview                                |
 | 06-151 | Stages of Development where UML is Utilized |
 
+| Guide  | Tittle            |
+| ------ | ----------------- |
+| 06-160 | Types of Diagrams |
+
 ---
 
 # Module 07-188: Software Systems Overview

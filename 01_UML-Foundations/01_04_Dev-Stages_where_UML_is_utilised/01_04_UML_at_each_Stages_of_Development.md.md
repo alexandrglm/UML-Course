@@ -10,6 +10,10 @@
 | 06-150     | UML Overview                                    |
 | **06-151** | **Stages of Development where UML is Utilized** |
 
+| Guide  | Tittle            |
+| ------ | ----------------- |
+| 06-160 | Types of Diagrams |
+
 ---
 
 # **06-151:    Dev. Stages where UML is utilised**

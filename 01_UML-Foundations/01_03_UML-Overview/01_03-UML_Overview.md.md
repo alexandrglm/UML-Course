@@ -5,10 +5,14 @@
 | 07-187 | The Importance of Systems Analysis and Design |
 | 07-188 | Overview of Software Systems                  |
 
-| Guide  | Tittle                                      |
-| ------ | ------------------------------------------- |
-| **06-150** | **UML Overview**                                |
-| 06-151 | Stages of Development where UML is Utilized |
+| Guide      | Tittle                                      |
+| ---------- | ------------------------------------------- |
+| **06-150** | **UML Overview**                            |
+| 06-151     | Stages of Development where UML is Utilized |
+
+| Guide  | Tittle            |
+| ------ | ----------------- |
+| 06-160 | Types of Diagrams |
 
 ---
 ## 06-150:    UML Overview

@@ -45,6 +45,10 @@
 | 06-150 | UML Overview                                |
 | 06-151 | Stages of Development where UML is Utilized |
 
+| Guide  | Tittle            |
+| ------ | ----------------- |
+| 06-160 | Types of Diagrams |
+
 ### 2. UML Commons
 
 | Guide  | Tittle                                             |
@@ -62,7 +66,6 @@
 
 | Guide  | Tittle                                 |
 | ------ | -------------------------------------- |
-| 06-160 | Section Introduction                   |
 | 06-161 | Overview of Structural Diagrams in UML |
 | 06-162 | Overview of Behavioral Diagrams in UML |
 

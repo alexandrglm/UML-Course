@@ -13,6 +13,10 @@
 | 06-150 | UML Overview                                |
 | 06-151 | Stages of Development where UML is Utilized |
 
+| Guide  | Tittle            |
+| ------ | ----------------- |
+| 06-160 | Types of Diagrams |
+
 ---
 ## 07-187:  The Importance of System Analysis and Design for Solving Real World (software) problems
 
